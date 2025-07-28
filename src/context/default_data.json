@@ -1,0 +1,119 @@
+{
+  "name": "José María Rodríguez García",
+  "titulo": "Frontend Developer — Especializado en React",
+  "ubicacion": "Barcelona, España",
+  "email": "chemar@gmail.com",
+  "telefono": "",
+  "github": "https://github.com/Potranco",
+  "perfil": "Desarrollador frontend con más de 10 años de experiencia, especializado en React y ecosistemas modernos como Vite, Tailwind, y Node.js. Amplia experiencia en diseño y desarrollo de entornos de componentes, desarrollo de interfaces SPA, optimización de rendimiento y soporte multiplataforma. Perfil orientado a la calidad del código, el trabajo en equipo y la evolución continua.",
+  "stack_principal": {
+    "frontend": [
+      "React",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind",
+      "Sass"
+    ],
+    "entornos": [
+      "Vite",
+      "Webpack",
+      "Babel",
+      "Node.js",
+      "Express",
+      "Stencil.js"
+    ],
+    "testing": [
+      "Jest",
+      "Mocha",
+      "Chai",
+      "React Testing Library"
+    ],
+    "versionado": [
+      "Git", "SVN", "Bitbucket"
+    ],
+    "otros": [
+      "Gulp",
+      "Mustache",
+      "MongoDB",
+      "MySQL",
+      "Docker (nivel básico)"
+    ],
+    "diseno_ui": [
+      "Photoshop",
+      "Figma"
+    ]
+  },
+  "experiencia": [
+    {
+      "puesto": "Frontend Developer",
+      "empresa": "Opentrends, SL",
+      "fecha": "2019 – Actualidad",
+      "ubicacion": "Barcelona, Remoto híbrido",
+      "responsabilidades": [
+        "Desarrollo de entornos de componentes con React y Stencil.js.",
+        "Configuración de entornos con Babel, Node.js, Gulp, Jest.",
+        "Enfoque en diseño reutilizable, testing y documentación técnica."
+      ]
+    },
+    {
+      "puesto": "Frontend Developer",
+      "empresa": "Capitole Consulting, SL",
+      "fecha": "2018 – 2019",
+      "ubicacion": "Barcelona",
+      "responsabilidades": [
+        "Diseño de framework para apps en TPV con Gulp, Express, Mustache y SASS.",
+        "Desarrollo modular en Node.js para dispositivos con limitaciones técnicas."
+      ]
+    },
+    {
+      "puesto": "Frontend Engineer",
+      "empresa": "Schibsted Spain (antes Anuntis)",
+      "fecha": "2011 – 2018",
+      "ubicacion": "Barcelona",
+      "responsabilidades": [
+        "Desarrollo frontend sin librerías para banners móviles ligeros.",
+        "Participación en el entorno común de componentes React para portales como Infojobs, Vibbo, Letuva y Laboris."
+      ]
+    },
+    {
+      "puesto": "Webmaster & Cofundador",
+      "empresa": "Labutike, SL",
+      "fecha": "2014 – 2016",
+      "ubicacion": "Barcelona",
+      "responsabilidades": [
+        "Gestión integral de e-commerce textil.",
+        "Diseño, desarrollo y mantenimiento web."
+      ]
+    },
+    {
+      "puesto": "Frontend Developer",
+      "empresa": "Sperit, S.L.",
+      "fecha": "2007 – 2011",
+      "responsabilidades": [
+        "Desarrollo y maquetación para la Universitat Oberta de Catalunya.",
+        "Stack: PHP, Wordpress MU, JQuery, Prototype."
+      ]
+    },
+    {
+      "puesto": "Frontend Developer",
+      "empresa": "Keapps, S.L.",
+      "fecha": "2006 – 2007",
+      "responsabilidades": [
+        "Interfaces y diseño para cliente final sobre entorno Java."
+      ]
+    }
+  ],
+  "formacion": [
+    "Técnico Especialista en Informática de Gestión – Bemen-3, Barcelona",
+    "Curso online React (2017)",
+    "Curso ES6 (2016 – 2017)",
+    "Formación JavaScript, Oracle, ActionScript y Flash (2000 – 2005)"
+  ],
+  "idiomas": {
+    "espanol": "Nativo",
+    "catalan": "Fluido",
+    "ingles": "Técnico (lectura y documentación)"
+  }
+}

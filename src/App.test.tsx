@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('App', () => {
-    test('renders without crashing', () => {
+    test('renders', () => {
         render(<App />);
-        expect(screen.getByText('chemar@gmail.com')).toBeInTheDocument();
+        expect(screen.getByText('José María Rodríguez García')).toBeInTheDocument();
     });
 });

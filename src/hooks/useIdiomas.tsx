@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import { useData } from "../context/data";
 
 const useIdiomas = () => {
-    const { user, loaded } = useData()
+    const { state } = useData()
     const [idiomas, setIdiomas] = useState<any[]>([]);
 
     useEffect(() => {
-        setIdiomas(loaded
-            ? user.idiomas || []
+        const {cv, status} = state
+        setIdiomas(status === 'success'
+            ? cv.idiomas || []
             : []
         );
-    }, [user, loaded]);
+    }, [state]);
 
     const getIdiomas = async () => {
         return idiomas;

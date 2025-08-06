@@ -2,16 +2,17 @@ import { useEffect, useState } from "react";
 import { useData } from "../context/data";
 
 const useFormacion = () => {
-    const { user, loaded } = useData()
+    const { state } = useData()
     const [formacion, setFormacion] = useState<any[]>([]);
 
     useEffect(() => {
-        if (loaded) {
-            setFormacion(user.formacion || []);
+        const {cv, status} = state
+        if (status === 'success') {
+            setFormacion(cv.formacion || []);
         } else {
             setFormacion([]);
         }
-    }, [user, loaded]);
+    }, [state]);
 
     const getFormacion = async () => {
         return formacion;

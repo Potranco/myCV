@@ -1,21 +1,20 @@
 import { 
   createContext,
-  useState,
   useEffect,
-  useContext } from "react";
-
-import default_data from "./default_data.json";
+  useContext,
+  useReducer
+ } from "react";
+import { initialCVState, reducer} from '../reducers/cvReducer'
+import getCv from "../api/getCv";
 
 interface DataContextType {
-  user: any | undefined;
-  loaded: boolean;
+  state: any | undefined;
   clean: () => void;
   setUser: (user: any | undefined) => void;
 }
 
 const defaultData: DataContextType = {
-  user: undefined,
-  loaded: false,
+  state: undefined,
   clean: () => {},
   setUser: () => {},
 };
@@ -23,24 +22,28 @@ const defaultData: DataContextType = {
 const DataContext = createContext<DataContextType>(defaultData);
 
 const DataProvider = ({ children }: { children: React.ReactNode;}) => {
-  const [user, setUser] = useState<any | undefined>(undefined);
-  const [loaded, setLoaded] = useState(false);
-  // const [error, setError] = useState(200)
+  const [state, dispatch] = useReducer(reducer, initialCVState)
   
   useEffect(() => {
-    if (user === undefined) {
-        setUser(default_data)
-        setLoaded(true);
-    }
-  }, [user])
+    if (state.status === "idle") setUser()
+  }, [])
 
-  const clean = () => {
-    setUser(undefined)
-    setLoaded(false)
-  };
+  const clean = () => dispatch({type: 'CLEAN', payload: state});
+
+  const setUser = () => {
+    dispatch({type: 'FETCH_START'})
+    getCv()
+      .then(res => {
+        dispatch({type: 'FETCH_SUCCESS', payload: res})
+      })
+      .catch(e => {
+        dispatch({type: 'FETCH_ERROR', error: e.message})
+      })
+      
+  }
 
   const value = { 
-    user, loaded, clean, setUser
+    state, clean, setUser
   }
   
   return (

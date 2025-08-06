@@ -1,9 +1,8 @@
 import UseProfile from "@/hooks/useProfile";
 
 const descripcion = () => {
-    const { profile, loaded } = UseProfile();
+    const { profile } = UseProfile();
 
-    if (!loaded) return <div>Loading...</div>;
     if (!profile) return <div>No user data available</div>;
 
     return (

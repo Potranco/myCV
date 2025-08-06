@@ -2,24 +2,26 @@ import { useEffect, useState } from "react";
 import { useData } from "../context/data";
 
 function useProfile() {
-    const { user, loaded } = useData();
+    const { state } = useData();
     const [profile, setProfile] = useState<any | null>(null);
 
     useEffect(() => {
-        if (user) {
+        const {cv} = state
+       
+        if (cv !== undefined) {
             setProfile({
-                "name": user.name,
-                "titulo": user.titulo,
-                "ubicacion": user.ubicacion,
-                "email": user.email,
-                "telefono": user.telefono,
-                "github": user.github,
-                "perfil": user.perfil
+                "name": cv.name,
+                "titulo": cv.titulo,
+                "ubicacion": cv.ubicacion,
+                "email": cv.email,
+                "telefono": cv.telefono,
+                "github": cv.github,
+                "perfil": cv.perfil
             });
         } else {
             setProfile(null);
         }
-    }, [user, loaded]);
+    }, [state]);
 
     const getProfile = async () => {
         return profile;
@@ -27,8 +29,7 @@ function useProfile() {
 
     return {
         profile,
-        getProfile,
-        loaded
+        getProfile
     };
 }
 

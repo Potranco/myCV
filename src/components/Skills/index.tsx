@@ -2,11 +2,10 @@ import useSkills from '@/hooks/useSkills'
 
 const skill_color = {
     frontend: "bg-blue-100 text-blue-800",
-        
 };
 
 const Skills = () => {
-    const {skills, loaded} = useSkills()
+    const {skills} = useSkills()
     
     const createSkillItem = (skills: Array<string>) => {
         return (
@@ -20,8 +19,8 @@ const Skills = () => {
         );
     };
 
-    if (!loaded) return <div>Loading...</div>
     if (skills == null) return <div>Error...</div>
+    
     return (
         <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Habilidades</h2>

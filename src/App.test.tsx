@@ -4,6 +4,6 @@ import App from './App';
 describe('App', () => {
     test('renders', () => {
         render(<App />);
-        expect(screen.getByText('José María Rodríguez García')).toBeInTheDocument();
+        expect(screen.getByText('Contáctame')).toBeInTheDocument();
     });
 });

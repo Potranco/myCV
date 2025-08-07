@@ -10,8 +10,8 @@ const Experience = () => {
                 {experience.map((job, index) => (
                 <li key={`${index}-experience`}>
                     <h3 className="font-semibold">{job.puesto} · {job.empresa}</h3>
-                    <p className="text-sm text-gray-600">{job.fecha} · {job.ubicacion}</p>
-                    <ul className="list-disc ml-5 text-gray-700 text-sm mt-1">
+                    <p className="text-sm text-text">{job.fecha} · {job.ubicacion}</p>
+                    <ul className="list-disc ml-5 text-text text-sm mt-1">
                         {job.responsabilidades.map((responsibility:string, idx:number) => (
                             <li key={`${index}-responsibility-${idx}`}>{responsibility}</li>
                         ))}

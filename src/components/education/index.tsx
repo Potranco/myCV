@@ -9,7 +9,7 @@ const Education = () => {
             <ul>
                 {formacion.map((course:string, index:number) => (
                     <li key={`${index}-education`}>
-                        <p className="font-medium text-gray-800">{course}</p>
+                        <p className="font-medium text-text">{course}</p>
                     </li>
                 ))}
             </ul>

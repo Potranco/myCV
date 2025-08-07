@@ -1,0 +1,20 @@
+/* Default Theme */
+:root {
+  --color-primary: #007bff;
+  --color-background: #ffffff;
+  --color-text: #000000;
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --color-primary: #0dcaf0;
+  --color-background: #121212;
+  --color-text: #ffffff;
+}
+
+/* Theme rojo */
+[data-theme='red'] {
+  --color-primary: #e63946;
+  --color-background: #fff0f0;
+  --color-text: #1d1d1d;
+}

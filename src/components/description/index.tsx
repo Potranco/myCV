@@ -1,6 +1,6 @@
 import UseProfile from "@/hooks/useProfile";
 
-const descripcion = () => {
+const Descripcion = () => {
     const { profile } = UseProfile();
 
     if (!profile) return <div>No user data available</div>;
@@ -15,4 +15,4 @@ const descripcion = () => {
     );
 }
 
-export default descripcion;
+export default Descripcion;

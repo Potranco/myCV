@@ -1,10 +1,11 @@
 import useFormacion from '@/hooks/useFormacion'
+import PageComponent from '../page/page';
 
 const Education = () => {
     const { formacion } = useFormacion();
 
     return (
-        <section className="mb-6">
+        <PageComponent>
             <h2 className="text-xl font-semibold mb-2">Educación</h2>
             <ul>
                 {formacion.map((course:string, index:number) => (
@@ -13,7 +14,7 @@ const Education = () => {
                     </li>
                 ))}
             </ul>
-        </section>
+        </PageComponent>
     );
 }
 

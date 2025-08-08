@@ -73,8 +73,9 @@
       "fecha": "2011 – 2018",
       "ubicacion": "Barcelona",
       "responsabilidades": [
-        "Desarrollo frontend sin librerías para banners móviles ligeros.",
-        "Participación en el entorno común de componentes React para portales como Infojobs, Vibbo, Letuva y Laboris."
+        "Desarrollo frontend sin librerías para banners móviles ligeros, en el departamento de producto enfocado a la publicidad creación de campañas publicitarias (principalmente para entornos móviles y tablets)",
+        "Desarrollo una aplicación de creación de banners",
+        "Participación en el entorno común de componentes React para portales como mercadio.com, Infojobs, Vibbo, Lectiva y Laboris"
       ]
     },
     {
@@ -101,15 +102,63 @@
       "empresa": "Keapps, S.L.",
       "fecha": "2006 – 2007",
       "responsabilidades": [
-        "Interfaces y diseño para cliente final sobre entorno Java."
+        "Frontend para el cliente TecnoCasa, desarrollando maquetas y trabajos de diseño, sobre un entorno JAVA. HTML, CSS y javascript"
+      ]
+    },
+    {
+      "puesto": "Frontend Developer",
+      "empresa": "Infojobs.net",
+      "fecha": "2004 - 2006",
+      "responsabilidades": [
+        "Desarrollo maquetas HTML, javascript y CSS",
+        "Pequeños trabajos de diseño",
+        "Presentaciones en Flash",
+        "Soporte técnico a los departamentos de Comunicación y Marketing."
+      ]
+    },
+    {
+      "puesto": "Webmaster",
+      "empresa": "Flaix TV, S.L",
+      "fecha": "2002 - 2004",
+      "responsabilidades": [
+        "desempeñando las funciones de programador, administrador y diseñador de la web corporativa. HTML, CSS, javascript, APS y Photoshop."
+      ]
+    },
+    {
+      "puesto": "Maquetador web",
+      "empresa": "Interactive Bureau, S.L.",
+      "fecha": "2000 - 2002",
+      "responsabilidades": [
+        "Desarrollando proyectos web en HTML, javascript, CSS y ASP."
+      ]
+    },
+    {
+      "puesto": "Programador",
+      "empresa": "Meridiano Tecnologías, S.L.",
+      "fecha": "1999 - 2000",
+      "responsabilidades": [
+        "Administrador de Windows NT",
+        "Programador de aplicaciones a medida en C y Visual Basic."
+      ]
+    },
+    {
+      "puesto": "Programador",
+      "empresa": "Domenech, S.L.",
+      "fecha": "1998 - 1998",
+      "responsabilidades": [
+        "Desarrollo de pequeñas aplicaciones en C para la gestión de Alquiler de pisos y garajes."
       ]
     }
   ],
   "formacion": [
-    "Técnico Especialista en Informática de Gestión – Bemen-3, Barcelona",
-    "Curso online React (2017)",
-    "Curso ES6 (2016 – 2017)",
-    "Formación JavaScript, Oracle, ActionScript y Flash (2000 – 2005)"
+    "Curse los estudios de EGB en 'La Escolanía Mater Amabilis'. Madrid",
+    "Curse los estudios de FP 1º grado en 'Pedro de Valdivia' en la rama de Auxiliar Administrativo. Titulándome como Auxiliar Administrativo. Barcelona.",
+    "Curse los estudios de FP 2º grado en 'Bemen-3' en la rama de Informática de Gestión. Titulándome como Técnico especialista en Informática de Gestión. Barcelona.",
+    "Curso de Formación Oracle en el Forum de Barcelona (1999)",
+    "Formación JavaScript, Oracle, ActionScript y Flash (2000 – 2005)",
+	  "Curso de Formación Javascript en el Forum de Barcelona (2000)",
+		"Curso ES6 online (2016 - 2017)",
+	  "Curso React online (2017)"
   ],
   "idiomas": {
     "espanol": "Nativo",

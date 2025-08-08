@@ -1,10 +1,11 @@
 import useExpirience from "@/hooks/useExpirience";
+import PageComponent from "../page/page";
 
 const Experience = () => {
     const { experience } = useExpirience();
 
     return (
-        <section className="mb-6">
+        <PageComponent>
             <h2 className="text-xl font-semibold mb-2">Experiencia</h2>
             <ul className="space-y-4">
                 {experience.map((job, index) => (
@@ -19,7 +20,7 @@ const Experience = () => {
                 </li>
                 ))}
             </ul>
-        </section>
+        </PageComponent>
     );
 }
 

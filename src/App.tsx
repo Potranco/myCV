@@ -2,6 +2,7 @@ import './App.css'
 import Experience from './components/expirience'
 import Education from './components/education'
 import Skills from './components/Skills'
+import Footer from './components/footer'
 import { DataProvider } from './context/data'
 import { ErrorsProvider } from './context/ErrorsContext'
 import Layout from '@/components/layout/index'
@@ -20,19 +21,12 @@ function App() {
   return (
     <ErrorsProvider>
       <DataProvider>
-        <Layout>
+        <Layout onChangeTheme={onChangeTheme} theme={theme}>
           <InitPage />
           <Experience />
           <Education />
           <Skills />
-          <section id="footer" className="snap-start mt-10 text-sm text-text">
-            <p className='flex flex-row gap-2'>
-              <span>© 2025 Chema</span> - 
-              <a href="mailto:chema@email.com" className="text-blue-600 underline">Contáctame</a>
-              - 
-              <span onClick={onChangeTheme} className=" text-blue-600">{theme}</span>
-            </p>
-          </section>
+          <Footer onChangeTheme={onChangeTheme} theme={theme} />
         </Layout>
       </DataProvider>
     </ErrorsProvider>

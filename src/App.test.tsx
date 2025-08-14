@@ -4,6 +4,6 @@ import App from './App';
 describe('App', () => {
     test('renders', () => {
         render(<App />);
-        expect(screen.getByText('Contáctame')).toBeInTheDocument();
+        expect(screen.getByText('© 2025 Chema')).toBeInTheDocument();
     });
 });

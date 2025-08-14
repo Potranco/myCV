@@ -1,0 +1,28 @@
+
+.menu-icon {
+    top: 10px;
+    right: -45px;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.left-0 > .menu-icon {
+    right: 20px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 32px;
+  height: 5px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.left-0 .bar1 {transform: translate(0, 11px) rotate(-45deg);}
+.left-0 .bar2 {opacity: 0;}
+.left-0 .bar3 {transform: translate(0, -11px) rotate(45deg);}
+
+.Menu a {
+  color: var(--color-blue-400);
+}

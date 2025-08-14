@@ -31,7 +31,7 @@ describe('useProfile', () => {
   it('should return profile object if user is valid', async () => {
     const { result } = customRenderHook();
     await waitFor(() => {
-      expect(result.current.profile.email).toEqual('chemar@gmail.com');
+      expect(result.current.profile.name).toEqual('Chema Rodríguez García');
     })
   });
 /*

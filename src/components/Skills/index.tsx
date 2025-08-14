@@ -23,7 +23,7 @@ const Skills = () => {
     if (skills == null) return <div>Error...</div>
     return (
     <PageComponent className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">Habilidades</h2>
+        <h2 id="skills" className="text-xl font-semibold mb-2">Habilidades</h2>
         {createSkillItem(skills['frontend'])}
         {createSkillItem(skills['entornos'])}
         {createSkillItem(skills['testing'])}

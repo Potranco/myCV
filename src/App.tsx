@@ -25,7 +25,7 @@ function App() {
           <Experience />
           <Education />
           <Skills />
-          <section className="snap-start mt-10 text-sm text-text">
+          <section id="footer" className="snap-start mt-10 text-sm text-text">
             <p className='flex flex-row gap-2'>
               <span>© 2025 Chema</span> - 
               <a href="mailto:chema@email.com" className="text-blue-600 underline">Contáctame</a>

@@ -2,9 +2,10 @@
   "name": "Chema Rodríguez García",
   "titulo": "Frontend Developer — Especializado en React",
   "ubicacion": "Barcelona, España",
-  "email": "chemar@gmail.com",
+  "email": "",
   "telefono": "",
   "github": "https://github.com/Potranco",
+  "linkeding": "",
   "perfil": "Desarrollador frontend con más de 10 años de experiencia, especializado en React y ecosistemas modernos como Vite, Tailwind, y Node.js. Amplia experiencia en diseño y desarrollo de entornos de componentes, desarrollo de interfaces SPA, optimización de rendimiento y soporte multiplataforma. Perfil orientado a la calidad del código, el trabajo en equipo y la evolución continua.",
   "stack_principal": {
     "frontend": [

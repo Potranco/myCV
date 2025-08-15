@@ -16,6 +16,7 @@ function useProfile() {
                 "email": cv.email,
                 "telefono": cv.telefono,
                 "github": cv.github,
+                "linkeding": cv.linkeding,
                 "perfil": cv.perfil
             });
         } else {

@@ -8,6 +8,7 @@ import { ErrorsProvider } from './context/ErrorsContext'
 import Layout from '@/components/layout/index'
 import { useEffect, useState } from 'react'
 import InitPage from './components/page/InitPage'
+import Descripcion from './components/description'
 
 function App() {
   const [theme, setTheme] = useState('ligth')
@@ -23,6 +24,7 @@ function App() {
       <DataProvider>
         <Layout onChangeTheme={onChangeTheme} theme={theme}>
           <InitPage />
+          <Descripcion />
           <Experience />
           <Education />
           <Skills />

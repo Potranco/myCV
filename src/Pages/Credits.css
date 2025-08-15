@@ -1,0 +1,14 @@
+@keyframes scrollCredits {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@layer utilities {
+  .animate-scroll {
+    animation: scrollCredits 20s linear infinite;
+  }
+}

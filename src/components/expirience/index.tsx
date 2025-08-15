@@ -32,7 +32,7 @@ const Experience = () => {
     return (
         <PageComponent>
             <h2 id="expirience" className="text-xl font-semibold mb-2">Experiencia</h2>
-            <Carousel data={data} className=" max-w-xs"/>
+            <Carousel data={data} className="max-w-xs"/>
         </PageComponent>
     );
 }

@@ -11,6 +11,11 @@ export default defineConfig({
     tailwindcss(),
     viteImagemin({
       // Esto optimiza JPEG, PNG, SVG, GIF y genera WebP
+      verbose: true,
+      filter: (result) => {
+        console.log(`🖼 Procesado: ${result}`);
+        return !!result
+      },
       gifsicle: {
         optimizationLevel: 7,
         interlaced: false,

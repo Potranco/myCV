@@ -13,8 +13,8 @@ const CardUser = () => {
         <p className="text-text">{profile?.titulo}</p>
         <ul className="text-sm text-text mt-1 flex flex-col gap-1">
           <li>{profile?.ubicacion}</li>
-          <li><a href={profile?.linkeding} target="_blank">linkedin</a></li>
-          <li><a href={profile?.github} target="_blank">github</a></li>
+          <li><a href={profile?.linkeding} rel="noopener noreferrer" target="_blank">linkedin</a></li>
+          <li><a href={profile?.github} rel="noopener noreferrer" target="_blank">github</a></li>
         </ul>
       </div>
     </div>

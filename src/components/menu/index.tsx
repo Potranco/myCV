@@ -16,7 +16,7 @@ export default function Menu({theme, onChangeTheme}:props) {
 
   return (
     <aside className={`Menu fixed top-0 pt-10 w-xs h-screen bg-background z-100 border-2 duration-200 ${viewMenu ? 'left-0' : 'left-[-320px]'}`}>
-        <div className='menu-icon' onClick={handleOnClick} title={`${viewMenu ? 'Cerrar' : 'Abrir'}`}>
+        <div className='menu-icon' onClick={handleOnClick} title={`${viewMenu ? 'Cerrar' : 'Abrir'} Menu`}>
           <div className="bar1 bg-foreground"></div>
           <div className="bar2 bg-foreground"></div>
           <div className="bar3 bg-foreground"></div>

@@ -31,10 +31,11 @@ export default function BackToTop() {
     showButton && (
       <div
         onClick={handleClick}
-        className='fixed bottom-4 right-4 z-50 rounded-full shadow-lg border border-black/10 bg-white dark:bg-neutral-900 p-2 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500'
-        aria-label='ir arriba'
+        className='fixed bottom-[-1px] right-4 z-50 p-3 rounded-t-full bg-white border border-black'
+        aria-label='Ir arriba'
+        title='Ir arriba'
       >
-        <img src={`${import.meta.env.BASE_URL}goToTop.png`} alt='Ir arriba' className='max-h-12'/>
+        <div className='arrow-up'></div>
       </div>
     )
   );

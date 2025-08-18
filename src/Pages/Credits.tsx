@@ -24,6 +24,10 @@ export default function Credits() {
           shadcn
 
         </p>
+        <p>Producción:
+          Duck.ai
+          ChatGPT
+        </p>
         <p>Control de calidad:
           Copilot
           Jest

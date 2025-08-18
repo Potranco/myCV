@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { useClickOutside } from '@/hooks/useClickOutside';
 import './style.css'
 type props = {
   theme: string
@@ -7,16 +8,13 @@ type props = {
 
 export default function Menu({theme, onChangeTheme}:props) {
   const [viewMenu, setViewMenu] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null);
   
-  const handleOnClick = (e:any) => {
-    e.stopPropagation()
-    e.preventDefault()
-    setViewMenu(!viewMenu)
-  }
-
+  useClickOutside(menuRef, () => setViewMenu(false))
+  
   return (
-    <aside className={`Menu fixed top-0 pt-10 w-xs h-screen bg-background z-100 border-2 duration-200 ${viewMenu ? 'left-0' : 'left-[-320px]'}`}>
-        <div className='menu-icon' onClick={handleOnClick} title={`${viewMenu ? 'Cerrar' : 'Abrir'} Menu`}>
+    <aside ref={menuRef} className={`Menu fixed top-0 pt-10 w-xs h-screen bg-background z-100 border-2 duration-200 ${viewMenu ? 'left-0' : 'left-[-320px]'}`}>
+        <div className='menu-icon' onClick={() => setViewMenu(!viewMenu)} title={`${viewMenu ? 'Cerrar' : 'Abrir'} Menu`}>
           <div className="bar1 bg-foreground"></div>
           <div className="bar2 bg-foreground"></div>
           <div className="bar3 bg-foreground"></div>

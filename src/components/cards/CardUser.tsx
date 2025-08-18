@@ -1,4 +1,6 @@
 import useProfile from "../../hooks/useProfile";
+import GitHubIcon from "../buttons/RRSS/GithubIcon";
+import LinkedinIcon from "../buttons/RRSS/LinkedinIcon";
 
 const CardUser = () => {
   const { profile } = useProfile();
@@ -13,8 +15,14 @@ const CardUser = () => {
         <p className="text-text">{profile?.titulo}</p>
         <ul className="text-sm text-text mt-1 flex flex-col gap-1">
           <li>{profile?.email}</li>
-          <li><a href={profile?.linkeding} rel="noopener noreferrer" target="_blank">linkedin</a></li>
-          <li><a href={profile?.github} rel="noopener noreferrer" target="_blank">github</a></li>
+          <li className="flex">
+            <a href={profile?.linkedin} rel="noopener noreferrer" target="_blank" title="Perfil en Linkedin">
+              <LinkedinIcon />
+            </a>
+            <a href={profile?.github} rel="noopener noreferrer" target="_blank" title="Perfil Github">
+              <GitHubIcon />
+            </a>
+          </li>
         </ul>
       </div>
     </div>

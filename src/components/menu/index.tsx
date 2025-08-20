@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { useClickOutside } from '@/hooks/useClickOutside';
+import PDFButton from "../buttons/PDFButton";
 import './style.css'
 type props = {
   theme: string
@@ -28,6 +29,7 @@ export default function Menu({theme, onChangeTheme}:props) {
         </nav>
         
         <div onClick={onChangeTheme} className="absolute left-[-2px] right-3 bottom-[-2px] bg-blue-600 text-white font-bold py-2 px-4  w-full uppercase">{theme}</div>
+        <PDFButton />
     </aside>
   )
 }

@@ -20,6 +20,8 @@ export default function Credits() {
           <br/>
           <a href="https://uiverse.io/profile/Itskrish01">Itskrish01</a>
           <br/>
+          <a href="https://uiverse.io/profile/satyamchaudharydev">satyam</a>
+          <br />
           <span className="text-green-400">Chema con mucha cafeína ☕</span>
         </p>
         <h2>Arte:</h2>

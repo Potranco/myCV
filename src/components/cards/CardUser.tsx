@@ -15,13 +15,14 @@ const CardUser = () => {
         <p className="text-text">{profile?.titulo}</p>
         <ul className="text-sm text-text mt-1 flex flex-col gap-1">
           <li>{profile?.email}</li>
-          <li className="flex">
+          <li className="flex items-center justify-items-center">
             <a href={profile?.linkedin} rel="noopener noreferrer" target="_blank" title="Perfil en Linkedin">
               <LinkedinIcon />
             </a>
             <a href={profile?.github} rel="noopener noreferrer" target="_blank" title="Perfil Github">
               <GitHubIcon />
             </a>
+            
           </li>
         </ul>
       </div>

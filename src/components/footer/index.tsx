@@ -10,6 +10,8 @@ const Footer = ({onChangeTheme, theme}:props) => {
               <span>© 2025 Chema</span>
               - 
               <span onClick={onChangeTheme} className=" text-blue-600 uppercase">{theme}</span>
+              -
+              <a href="https://pagespeed.web.dev/analysis/https-potranco-github-io-myCV/39tlemhrk4?form_factor=desktop" rel="noopener noreferrer" target="_blank">Pagespeed</a>
             </p>
         </section>
     )

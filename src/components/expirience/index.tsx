@@ -1,6 +1,6 @@
 import useExpirience from "@/hooks/useExpirience";
 import PageComponent from "../page/page";
-import Carousel from "../Carousel/Carousel";
+import Carousel from "../Carousel/Carousel.tsx";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent} from '../ui/card.tsx'
 import { useEffect, useState } from "react";
 
@@ -17,9 +17,9 @@ const Experience = () => {
                     <CardDescription>{job.fecha} · {job.ubicacion}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <ul className="list-disc ml-5 text-text text-sm mt-1">
+                    <ul className="list-none text-text text-sm">
                         {job.responsabilidades.map((responsibility:string, idx:number) => (
-                            <li key={`${index}-responsibility-${idx}`}>{responsibility}</li>
+                            <li className="mb-2" key={`${index}-responsibility-${idx}`}>{responsibility}</li>
                         ))}
                     </ul>
                 </CardContent>
@@ -32,7 +32,7 @@ const Experience = () => {
     return (
         <PageComponent>
             <h2 id="expirience" className="text-xl font-semibold mb-2">Experiencia</h2>
-            <Carousel data={data} className="max-w-xs"/>
+            <Carousel items={data} />
         </PageComponent>
     );
 }

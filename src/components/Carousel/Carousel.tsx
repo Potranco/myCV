@@ -1,37 +1,52 @@
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious
-} from "../ui/carousel";
+import { useState } from "react";
+import "./style.css";
 
-type props = {
-    align?: "vertical" | "horizontal"
-    data?: Array<any>
-    className?: string
+type props= {
+    items: Array<any>
 }
 
-const CarouselComponent = ({align = "horizontal", data = [], className = ''}:props) => {
-    return (
-        <Carousel
-            orientation={align}
-            className={className}
+const Carousel = ({ items }:props) => {
+  const [current, setCurrent] = useState(0);
+  const length = items.length;
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  return (
+    <>
+    <div className="carousel-container">
+      <button className="carousel-btn left" onClick={prevSlide}>❮</button>
+      <div className="carousel-wrapper">
+        <div
+          className="carousel-track"
+          style={{ transform: `translateX(-${(current * 100)}%)` }}
         >
-            <CarouselContent className="gap-2 items-center">
-                {data.map((item, index) => (
-                    <CarouselItem
-                        className=""
-                        key={`${index}-experience`}
-                    >
-                        {item}
-                    </CarouselItem>
-                ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-        </Carousel>
-    )
-}
+          {items.map((item, index) => (
+            <div className="carousel-item" key={index}>
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+      <button className="carousel-btn right" onClick={nextSlide}>❯</button>
+    </div>
 
-export default CarouselComponent
+    <div className="carousel-dots">
+        {items.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === current ? "active" : ""}`}
+            onClick={() => setCurrent(index)}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default Carousel;

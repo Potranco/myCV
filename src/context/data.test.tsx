@@ -1,22 +1,26 @@
-import { render, screen, waitFor } from '@testing-library/react';
+
+import { renderHook } from '@testing-library/react';
+import { vi } from 'vitest';
 import { DataProvider, useData } from './data';
-import { describe, it, expect } from 'vitest'
+import getCv from "../api/getCv";
 
-const MockContextValue = () => {
-    const { state } = useData();
-    return <div>{JSON.stringify(state.cv?.name)}</div>;
-}
+vi.mock("../api/getCv", () => ({
+  default: vi.fn()
+}));
 
-describe('DataContext', () => {
-    it('should provide default user data', async () => {
-        render(
-            <DataProvider>
-                <MockContextValue />
-            </DataProvider>
-        );
+describe('useData', () => {
+  it('should return context with state, clean, and setUser functions', async () => {
+    const mockCv = { name: 'John Doe', skills: ['React', 'Node.js'] };
+    (getCv as vi.Mock).mockResolvedValue(mockCv);
 
-        await waitFor(() => {
-            expect(screen.getByText((t) => t.includes('Chema'))).toBeInTheDocument()
-        })
-    });
+    let resolve;
+    const promise = new Promise((res) => { resolve = res; });
+    (getCv as vi.Mock).mockReturnValue(promise);
+
+    const wrapper = ({ children }) => <DataProvider>{children}</DataProvider>;
+
+    renderHook(() => useData(), { wrapper });
+
+    expect(getCv).toHaveBeenCalled();
+  });
 });

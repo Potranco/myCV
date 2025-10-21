@@ -2,7 +2,7 @@
 // creaditos: https://uiverse.io/profile/Itskrish01
 const GitHubIcon = () => {
   return (
-    <div className="flex">
+    <div role="img" className="flex">
       <svg width={0} height={0} style={{position: 'absolute'}}>
         <defs>
           <clipPath id="squircleClip" clipPathUnits="objectBoundingBox">

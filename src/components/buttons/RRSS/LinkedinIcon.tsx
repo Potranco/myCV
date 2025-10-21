@@ -2,7 +2,7 @@
 // creaditos: https://uiverse.io/profile/Itskrish01
 const Button = () => {
   return (
-    <div>
+    <div role="img">
       <svg width={0} height={0} style={{position: 'absolute'}}>
         <defs>
           <clipPath id="squircleClip" clipPathUnits="objectBoundingBox">

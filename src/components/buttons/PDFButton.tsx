@@ -6,6 +6,7 @@ const PDFButton = () => {
             className="absolute right-[-130px] bottom-2 z-50"
             target='_blank'
             rel='noopener noreferrer'
+            role='link'
         >
         <div className="button" data-tooltip="Descargar" title="Descargar CV en PDF">
             <div className="button-wrapper">

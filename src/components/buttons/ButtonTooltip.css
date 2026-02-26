@@ -1,4 +1,4 @@
-.button {
+.ButtonTooltip {
   --width: 120px;
   --height: 50px;
   --tooltip-height: 35px;
@@ -16,7 +16,7 @@
   transition: background 0.3s;
 }
 
-.button::before {
+.ButtonTooltip::before {
   position: absolute;
   content: attr(data-tooltip);
   width: var(--tooltip-width);
@@ -30,7 +30,7 @@
   left: calc(50% - var(--tooltip-width) / 2);
 }
 
-.button::after {
+.ButtonTooltip::after {
   position: absolute;
   content: '';
   width: 0;
@@ -41,19 +41,19 @@
   bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
 }
 
-.button::after,.button::before {
+.ButtonTooltip::after,.ButtonTooltip::before {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
 }
 
-.text {
+.ButtonTooltip-text {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.button-wrapper,.text,.icon {
+.ButtonTooltip-wrapper,.ButtonTooltip-text,.ButtonTooltip-icon {
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -62,15 +62,15 @@
   color: #fff;
 }
 
-.text {
+.ButtonTooltip-text {
   top: 0
 }
 
-.text,.icon {
+.ButtonTooltip-text,.ButtonTooltip-icon {
   transition: top 0.5s;
 }
 
-.icon {
+.ButtonTooltip-icon {
   color: #fff;
   top: 100%;
   display: flex;
@@ -78,32 +78,32 @@
   justify-content: center;
 }
 
-.icon svg {
+.ButtonTooltip-icon svg {
   width: 24px;
   height: 24px;
 }
 
-.button:hover {
+.ButtonTooltip:hover {
   background: #6c18ff;
 }
 
-.button:hover .text {
+.ButtonTooltip:hover .text {
   top: -100%;
 }
 
-.button:hover .icon {
+.ButtonTooltip:hover .icon {
   top: 0;
 }
 
-.button:hover:before,.button:hover:after {
+.ButtonTooltip:hover:before,.ButtonTooltip:hover:after {
   opacity: 1;
   visibility: visible;
 }
 
-.button:hover:after {
+.ButtonTooltip:hover:after {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
 }
 
-.button:hover:before {
+.ButtonTooltip:hover:before {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
 }
